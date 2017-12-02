@@ -32,14 +32,13 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/{name}")
-     * @param string $name
+     * @Route("/")
      * @param LoggerInterface $logger
      * @return Response
      */
-    public function index(string $name = 'anonymus', LoggerInterface $logger): Response
+    public function index(LoggerInterface $logger): Response
     {
-        $logger->info('user: ' . $name);
-        return $this->render('home/index.html.twig', ['name' => $this->decorator->upper($name)]);
+        $logger->info('user logging ' );
+        return $this->render('home/index.html.twig', ['name' => $this->decorator->upper('Symfony')]);
     }
 }

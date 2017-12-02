@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e26f29f46666507fd6b088e7deda5300",
+    "content-hash": "a8ed6cca3a155b165d65c7c95acff24f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -789,6 +789,62 @@
                 "controllers"
             ],
             "time": "2017-12-01T00:43:37+00:00"
+        },
+        {
+            "name": "symfony/asset",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/asset.git",
+                "reference": "677a8328aa6b0d31542ff007273b0986c1c7ccea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/asset/zipball/677a8328aa6b0d31542ff007273b0986c1c7ccea",
+                "reference": "677a8328aa6b0d31542ff007273b0986c1c7ccea",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "require-dev": {
+                "symfony/http-foundation": "~2.8|~3.0|~4.0",
+                "symfony/http-kernel": "~2.8|~3.0|~4.0"
+            },
+            "suggest": {
+                "symfony/http-foundation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Asset\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Asset Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-10-24T14:12:06+00:00"
         },
         {
             "name": "symfony/cache",
@@ -2375,6 +2431,28 @@
             "description": "Symfony WebServerBundle",
             "homepage": "https://symfony.com",
             "time": "2017-11-19T21:22:53+00:00"
+        },
+        {
+            "name": "symfony/webpack-encore-pack",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/webpack-encore-pack.git",
+                "reference": "4c3874189d3f4a76b039833efa104940c01f0bae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/webpack-encore-pack/zipball/4c3874189d3f4a76b039833efa104940c01f0bae",
+                "reference": "4c3874189d3f4a76b039833efa104940c01f0bae",
+                "shasum": ""
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for Symfony Encore",
+            "time": "2017-09-11T13:27:25+00:00"
         },
         {
             "name": "symfony/yaml",
