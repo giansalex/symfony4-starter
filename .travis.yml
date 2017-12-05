@@ -6,6 +6,7 @@ php:
 before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction
+  - npm install
   - ./node_modules/.bin/encore dev
 
 script:
