@@ -30,11 +30,10 @@ class HomeControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        echo 'RESPONSE ' . $client->getResponse()->getContent();
-//        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-//        $this->assertGreaterThan(
-//            0,
-//            $crawler->filter('html:contains("ryan")')->count()
-//        );
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertGreaterThan(
+            0,
+            $crawler->filter('html:contains("ryan")')->count()
+        );
     }
 }
