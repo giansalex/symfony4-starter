@@ -11,6 +11,7 @@
         "symfony/framework-bundle": "^3.4",
         "symfony/monolog-bundle": "^3.1",
         "symfony/phpunit-bridge": "^4.0",
+        "symfony/profiler-pack": "^1.0",
         "symfony/security-bundle": "^4.0",
         "symfony/twig-bundle": "^3.4",
         "symfony/web-server-bundle": "^3.4",
@@ -20,8 +21,7 @@
     "require-dev": {
         "symfony/browser-kit": "^4.0",
         "symfony/css-selector": "^4.0",
-        "symfony/dotenv": "^3.4",
-        "symfony/profiler-pack": "^1.0"
+        "symfony/dotenv": "^3.4"
     },
     "config": {
         "preferred-install": {
