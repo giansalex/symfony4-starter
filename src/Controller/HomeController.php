@@ -17,6 +17,7 @@ use Symfony\Component\Form\Extension\Core\Type\{
 };
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class HomeController extends AbstractController
 {
@@ -78,5 +79,19 @@ class HomeController extends AbstractController
         return $this->render('home/new.html.twig', array(
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/hello/{name}")
+     * @param TranslatorInterface $translator
+     * @param string $name
+     * @return Response
+     */
+    public function hello(TranslatorInterface $translator, string $name): Response
+    {
+        $translator->setLocale('fr_FR');
+        $text = $translator->trans('Hola %name%', ['%name%' => $name]);
+
+        return $this->render('home/hello.html.twig', ['saludo' => $text]);
     }
 }
