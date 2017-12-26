@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab49f3418cb20ce664729ce4da0e2388",
+    "content-hash": "b6d5611167e446479f1dc394340d4e04",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3225,6 +3225,73 @@
             ],
             "description": "A pack for Symfony Encore",
             "time": "2017-09-11T13:27:25+00:00"
+        },
+        {
+            "name": "symfony/workflow",
+            "version": "v4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/workflow.git",
+                "reference": "c4eb6034e6b4b37fd42e307471b4c976021ea69d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/workflow/zipball/c4eb6034e6b4b37fd42e307471b4c976021ea69d",
+                "reference": "c4eb6034e6b4b37fd42e307471b4c976021ea69d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/property-access": "~3.4|~4.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/security-core": "~3.4|~4.0",
+                "symfony/validator": "~3.4|~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Workflow\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                }
+            ],
+            "description": "Symfony Workflow Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "petrinet",
+                "place",
+                "state",
+                "statemachine",
+                "transition",
+                "workflow"
+            ],
+            "time": "2017-12-04T12:31:58+00:00"
         },
         {
             "name": "symfony/yaml",
