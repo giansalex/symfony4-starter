@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Author;
 use App\Entity\Task;
 use App\Service\Decorator;
 use Psr\Log\LoggerInterface;
@@ -18,6 +19,7 @@ use Symfony\Component\Form\Extension\Core\Type\{
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class HomeController extends AbstractController
 {
@@ -93,5 +95,32 @@ class HomeController extends AbstractController
         $text = $translator->trans('Hola %name%', ['%name%' => $name]);
 
         return $this->render('home/hello.html.twig', ['saludo' => $text]);
+    }
+
+    /**
+     * @Route("/validate")
+     * @return Response
+     */
+    public function author(ValidatorInterface $validator): Response
+    {
+        $author = new Author();
+        $author->name = 'Giancarlos';
+        // ... do something to the $author object
+
+//        $validator = $this->get('validator');
+        $errors = $validator->validate($author);
+
+        if (count($errors) > 0) {
+            /*
+             * Uses a __toString method on the $errors variable which is a
+             * ConstraintViolationList object. This gives us a nice string
+             * for debugging.
+             */
+            $errorsString = (string) $errors;
+
+            return new Response($errorsString);
+        }
+
+        return new Response('The author is valid! Yes!');
     }
 }
