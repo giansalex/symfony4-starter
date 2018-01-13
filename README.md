@@ -9,9 +9,9 @@ Symfony 4.0 - Getting Started
 - [ ] Bundles
 - [ ] Console
 - [x] Contributing
-- [ ] Databases (Doctrine ORM)
+- [x] Databases (Doctrine ORM)
 - [ ] Deployment
-- [ ] Email
+- [x] Email
 - [x] Event Dispatcher
 - [x] Flex
 - [x] Forms
