@@ -2,18 +2,17 @@ framework:
     secret: '%env(APP_SECRET)%'
     default_locale: '%locale%'
     validation: { enable_annotations: true }
-    #csrf_protection: ~
+    #csrf_protection: true
     #http_method_override: true
-    #trusted_hosts: ~
 
-    # uncomment this entire section to enable sessions
-    #session:
-    #    # With this config, PHP's native session handling is used
-    #    handler_id: ~
+    # Enables session support. Note that the session will ONLY be started if you read or write from it.
+    # Remove or comment this section to explicitly disable session support.
+    session:
+        handler_id: ~
+        cookie_secure: auto
+        cookie_samesite: lax
 
-    #esi: ~
-    #fragments: ~
+    #esi: true
+    #fragments: true
     php_errors:
         log: true
-    assets:
-        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
